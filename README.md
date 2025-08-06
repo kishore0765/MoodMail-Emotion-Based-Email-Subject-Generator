@@ -7,11 +7,11 @@ A simple and fun React application that generates an email subject and footer ba
 
 ## 🚀 Features
 
--   **Emotion & Tone Analysis:** Automatically analyzes your email body to understand the underlying sentiment.
--   **AI-Powered Suggestions:** Uses a powerful AI model (like Google's Gemini) to generate creative and relevant subject lines.
--   **Customizable Tone:** Select the tone you're aiming for—Professional, Casual, Urgent, or Playful.
--   **One-Click Copy:** Easily copy your chosen subject line to the clipboard.
--   **Modern UI:** A clean, responsive, and intuitive interface built with React and TypeScript.
+-   **Mood-Based Generation**: Enter your mood, and the app will generate a relevant email subject and footer.
+-   **Customizable**: If your mood isn't in our dictionary, it creates a default template for you.
+-   **Sleek UI**: A clean and modern interface built with **Tailwind CSS**.
+-   **Copy to Clipboard**: Easily copy the generated content with a single click.
+-   **Reset and Go Again**: Quickly reset the form to generate a new MoodMail.
 
 ---
 
@@ -31,17 +31,17 @@ A brief overview of the project's directory structure:
 
 ```
 /
-├── public/              # Static assets like favicons and images
-├── src/
-│   ├── components/      # Reusable React components
-│   ├── lib/             # Helper functions, API calls (e.g., for Gemini)
-│   ├── App.tsx          # Main application component
-│   ├── main.tsx         # React application entry point
-│   └── index.css        # Global styles
-├── index.html           # Main HTML file for Vite
-├── package.json         # Project dependencies and scripts
-├── README.md            # You are here!
-└── vite.config.ts       # Vite configuration file
+├── components
+│   └── ui
+│       ├── button.tsx
+│       ├── input.tsx
+│       ├── Moodinput.tsx
+│       ├── Moodoutput.tsx
+│       └── textarea.tsx
+├── pages
+│   └── Home.tsx
+└── lib
+└── utils.ts
 ```
 
 ---
@@ -93,8 +93,7 @@ Follow these instructions to get a local copy up and running for development and
 1.  Enter the body of your email into the main text area.
 2.  Choose the desired `Tone` from the dropdown menu.
 3.  Click the "Generate Subjects" button.
-4.  Review the list of AI-generated subject lines.
-5.  Click on any suggestion to copy it to your clipboard!
+4.  Click on any suggestion to copy it to your clipboard!
 
 ---
 
